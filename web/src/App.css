@@ -1,0 +1,98 @@
+:root {
+  --primary: #fff666;
+  --secondary: #b749a2;
+  --terciary: #5e55b1;
+  --lightgrey: #99999999;
+}
+
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+  max-width: 300px;
+}
+
+* {
+  outline: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--terciary);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+form, fieldset {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+fieldset {
+  /* grid-template-columns: 1fr 1fr; */
+  border: none;
+}
+/* fieldset span {
+  grid-column: 1 / 3;
+} */
+fieldset span {
+  font-size: 80%;
+}
+
+.leaflet-control-container {
+  display: none;
+}
+.leaflet-container {
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+ul {
+  /* grid-column: 1 / 3; */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-gap: 0.5rem;
+}
+li {
+  cursor: pointer;
+  font-size: 80%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--terciary);
+  background-color: #b749a342;
+  list-style: none;
+  border-radius: 5px;
+}
+.selected {
+  opacity: 1;
+  border: 1px solid var(--lightgrey);
+  color: var(--secondary);
+  background-color: #fff;
+}
+
+main a,
+button {
+  text-align: center;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--primary);
+  background-color: var(--terciary);
+}
+main a:active,
+button:active {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
