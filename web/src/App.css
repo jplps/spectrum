@@ -1,15 +1,15 @@
 :root {
-  --primary: #fff666;
-  --secondary: #b749a2;
-  --terciary: #5e55b1;
+  --primary: #5bf400ff;
+  --secondary: rgb(175, 0, 149);
+  --terciary: #ffee00ff;
   --lightgrey: #99999999;
 }
 
 body {
   margin: 0 auto;
   padding: 1rem;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: #000;
+  color: #fff;
   max-width: 300px;
 }
 
@@ -88,11 +88,11 @@ button {
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
-  color: var(--primary);
-  background-color: var(--terciary);
+  color: var(--terciary);
+  background-color: var(--secondary);
 }
 main a:active,
 button:active {
-  color: var(--primary);
-  background-color: var(--secondary);
+  color: var(--secondary);
+  background-color: var(--terciary);
 }
