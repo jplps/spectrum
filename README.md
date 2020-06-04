@@ -1,8 +1,8 @@
-# artLAB
+# Spectrum
 
-Register art events all over the world, and locate the ones you want.
+Register cultural/artistic events all over the world, and locate others!
 
-Our vision for the audio-visual events is that they can be displayed as ART LABORATORIES, comprehending all forms of human expression. Here you can find laboratories scattered all over the world!
+Our vision for the audio-visual events is that they can be displayed as ARTISTIC LABORATORIES, comprehending all forms of human expression. Here you can find laboratories scattered all around, in places you couldn't imagine the existence before knowing about.
 
 We allow users to register cultural events. Users are able to filter events by area (city, state, latitude, longitude) and by it's art category(ies).
 
