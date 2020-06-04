@@ -6,7 +6,7 @@ Our vision for the audio-visual events is that they can be displayed as ART LABO
 
 We allow users to register cultural events. Users are able to filter events by area (city, state, latitude, longitude) and by it's art category(ies).
 
-## Who Are We?
+## Concept
 
 The human application and physical expression of creativity through skills and imagination in order to produce objects, environments and experiences IS art. And we believe that the most important form of expression with the reality by humans, is through the form of ART.
 
@@ -39,6 +39,11 @@ Despite the differences, we can benefit from the pattern nomenclature to separat
 With React we at the edge of the componentization pattern. Responsable for the interface of the web & mobile system (all the listings, dashboards, etc, with HTML & CSS and more) with the user, it helps us deal with a lot.
 
 ## Check the app
+
+Now we may open two differents terminals, and this should get the app up and running
+
+		server/ $ yarn dev
+		web/ $ yarn start
 
 If all went well, see localhost:3000 in the browser.
 
