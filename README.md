@@ -38,7 +38,6 @@ Despite the differences, we can benefit from the pattern nomenclature to separat
 
 With React we at the edge of the componentization pattern. Responsable for the interface of the web & mobile system (all the listings, dashboards, etc, with HTML & CSS and more) with the user, it helps us deal with a lot.
 
-
 ## Check the app
 
 If all went well, see localhost:3000 in the browser.
@@ -46,12 +45,13 @@ If all went well, see localhost:3000 in the browser.
 ### Todos
 
 #### Structure
+
 - [x] Create folders to retain web ui & server
 - [x] Initialize projects with npm
 - [x] Install server & web dependencies
 - [x] Create src/ folders in both projects dirs
 
-#### Backend
+#### Server
 
 - [x] Create and configure knexfile & knex
 - [x] Implement server and database/connection
@@ -59,10 +59,13 @@ If all went well, see localhost:3000 in the browser.
 - [x] Implement routes
 - [x] Create controllers with the avaiable routes
 
-#### Frontend
+#### Web
 - [x] Create-react-app in the frontend
 - [x] Clear & Refactor
 - [x] Create pages/ and components/
 - [x] Implement SPA
 - [x] Implement services/api
 - [ ] Refactor Styles
+
+#### Mobile
+- [ ] Start React Native Project
