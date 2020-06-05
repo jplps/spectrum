@@ -74,6 +74,10 @@ const Home = () => {
 						attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
 					/>
 
+					<Marker position={mapPosition}>
+						<Popup>You</Popup>
+					</Marker>
+
 					{markersPositions.map(marker => (
 						<Marker key={marker.id} position={[marker.latitude, marker.longitude]}>
 							<Popup>{marker.title}</Popup>
