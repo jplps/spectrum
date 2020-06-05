@@ -103,6 +103,7 @@ li {
 main a,
 button {
   text-align: center;
+  font-weight: bolder;
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
@@ -111,7 +112,6 @@ button {
 }
 main a:active,
 button:active {
-  font-weight: bolder;
   color: var(--secondary);
   background-color: var(--terciary);
 }

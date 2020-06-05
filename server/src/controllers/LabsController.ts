@@ -3,16 +3,16 @@ import knex from '../database/connection';
 
 class LabsController {
 	async index(req: Request, res: Response) {
-		const { city, state, arts } = req.query;
+		const { city, state } = req.query;
 
-		const parsedArts = String(arts)
-			.split(',')
-			.map(art => Number(art.trim()));
+		// const parsedArts = String(arts)
+		// 	.split(',')
+		// 	.map(art => Number(art.trim()));
 
 		try {
 			const labs = await knex('labs')
-				.join('labs_arts', 'lab.id', '=', 'labs_arts.lab_id')
-				.whereIn('labs_labs.lab_id', parsedArts)
+				// .join('labs_arts', 'labs.id', '=', 'labs_arts.lab_id')
+				// .whereIn('labs_arts.art_id', parsedArts)
 				.where('city', String(city))
 				.where('state', String(state))
 				.distinct() // No repeated results

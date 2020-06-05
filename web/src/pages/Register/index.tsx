@@ -1,8 +1,8 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 import Dropzone from '../../components/Dropzone';
 import Layout from '../../components/Layout';
@@ -48,8 +48,6 @@ const Register = () => {
 		// Set map position with user's browser latlng
 		navigator.geolocation.getCurrentPosition(position => {
 			const { latitude, longitude } = position.coords;
-
-			console.log(position);
 
 			setMapPosition([latitude, longitude]);
 		});
