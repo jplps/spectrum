@@ -15,9 +15,17 @@ class LabsController {
 				.whereIn('labs_labs.lab_id', parsedArts)
 				.where('city', String(city))
 				.where('state', String(state))
-				.distinct(); // No repeated results
+				.distinct() // No repeated results
+				.select('*');
 
-			return res.status(200).json(labs);
+			const serializedLabs = labs.map(lab => {
+				return {
+					...lab,
+					image_url: `http://localhost:4000/uploads/${lab.image}`,
+				};
+			});
+
+			return res.status(200).json(serializedLabs);
 		} catch (err) {
 			return res.status(400).json({ err });
 		}
@@ -33,12 +41,17 @@ class LabsController {
 				return res.status(400).json({ err: 'LAB not found.' });
 			}
 
+			const serializedLab = {
+				...lab,
+				image_url: `http://localhost:4000/uploads/${lab.image}`,
+			};
+
 			const arts = await knex('arts')
 				.join('labs_arts', 'arts.id', '=', 'labs_arts.category_id')
 				.where('labs_arts.lab_id', id)
 				.select('arts.name');
 
-			return res.status(200).json({ lab, arts });
+			return res.status(200).json({ lab: serializedLab, arts });
 		} catch (err) {
 			return res.status(400).json({ err });
 		}
@@ -52,18 +65,23 @@ class LabsController {
 		const trx = await knex.transaction();
 
 		const insertedIds = await trx('labs').insert({
-			title, image: 'fake', latitude, longitude, state, city, date, time
+			// Inserting filename to set the route
+			title, image: req.file.filename, latitude, longitude, state, city, date, time
 		});
 
 		const lab_id = insertedIds[0];
 
-		const labArts = arts.map((art_id: Number) => {
-			return { lab_id, art_id };
-		});
+		const labArts = arts
+			.split(',')
+			.map((art: string) => Number(art.trim()))
+			.map((art_id: number) => {
+				return { lab_id, art_id };
+			});
 
 		await trx('labs_arts').insert(labArts);
 
-		await trx.commit(); // Run commit to end transactions
+		// Run commit to end transactions
+		await trx.commit();
 
 		return res.status(200).json({ success: true });
 	}
