@@ -52,6 +52,21 @@ legend {
   font-weight: bolder;
 }
 
+.dropzone {
+  display: flex;
+  align-items: center;
+  align-items: middle;
+  min-height: 70px;
+  opacity: 0.75;
+  border-radius: 5px;
+  background-color: var(--terciary);
+}
+.dropzone p {
+  color: var(--secondary);
+  text-align: center;
+  padding: 1rem;
+}
+
 .leaflet-control-container {
   display: none;
 }
@@ -96,6 +111,7 @@ button {
 }
 main a:active,
 button:active {
+  font-weight: bolder;
   color: var(--secondary);
   background-color: var(--terciary);
 }

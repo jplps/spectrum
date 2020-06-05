@@ -4,6 +4,7 @@ import { LeafletMouseEvent } from 'leaflet';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
+import Dropzone from '../../components/Dropzone';
 import Layout from '../../components/Layout';
 import api from '../../services/api';
 
@@ -25,6 +26,9 @@ const Register = () => {
 		date: '',
 		time: '',
 	});
+
+	// Storing a file in a js var: can't be iniciated!
+	const [formImg, setFormImg] = useState<File>();
 
 	const [mapPosition, setMapPosition] = useState<[number, number]>([-20.451483, -54.572409]);
 	const [labPosition, setLabPosition] = useState<[number, number]>([0, 0]);
@@ -112,12 +116,24 @@ const Register = () => {
 		const { city, state } = geocode;
 		const arts = selectedArts
 
-		const data = {
-			title, latitude, longitude, state, city, date, time, arts
-		};
+		// Global js class FormData allows to send files and stuff
+		const data = new FormData();
+
+		data.append('title', title);
+		data.append('latitude', String(latitude));
+		data.append('longitude', String(longitude));
+		data.append('state', state);
+		data.append('city', city);
+		data.append('date', date);
+		data.append('time', time);
+		data.append('arts', arts.join(','));
+
+		if (formImg) {
+			data.append('image', formImg);
+		}
 
 		await api.post('/labs', data);
-		alert('Laboratório criado!');
+		alert('LAB created!');
 
 		history.push('/');
 	}
@@ -131,6 +147,8 @@ const Register = () => {
 							<p>LABORATORY</p>
 						</legend>
 						<span>Define title and image</span>
+
+						<Dropzone onUpload={setFormImg} />
 
 						<input type="text" name="title" id="title" placeholder="Title" onChange={handleInputChange} required />
 					</fieldset>
@@ -178,7 +196,7 @@ const Register = () => {
 						<input type="time" name="time" id="time" onChange={handleInputChange} required />
 					</fieldset>
 
-					<button type="submit">Register LAB</button>
+					<button type="submit">Submit</button>
 				</form>
 			</main>
 		</Layout>

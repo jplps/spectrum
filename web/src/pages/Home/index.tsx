@@ -23,7 +23,6 @@ const Home = () => {
 				</p>
 
 				<Link to="/register">Register</Link>
-				<Link to="/locate">Locate</Link>
 			</main>
 		</Layout>
 	)
