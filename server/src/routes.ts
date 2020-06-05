@@ -1,5 +1,4 @@
 import express from 'express';
-import path from 'path';
 import multer from 'multer';
 import multerConfig from '../config/multer';
 
@@ -11,9 +10,6 @@ const upload = multer(multerConfig);
 
 const artsController = new ArtsController();
 const labsController = new LabsController();
-
-routes.get('/assets', express.static(path.resolve(__dirname, '..', 'assets')));
-routes.get('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
 
 routes.get('/arts', artsController.index);
 

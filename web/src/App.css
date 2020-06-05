@@ -48,6 +48,9 @@ fieldset {
 fieldset span {
   font-size: 80%;
 }
+legend {
+  font-weight: bolder;
+}
 
 .leaflet-control-container {
   display: none;
@@ -71,7 +74,7 @@ li {
   justify-content: center;
   align-items: center;
   color: var(--terciary);
-  background-color: #b749a342;
+  background-color: #b749a371;
   list-style: none;
   border-radius: 5px;
 }
@@ -79,7 +82,7 @@ li {
   opacity: 1;
   border: 1px solid var(--lightgrey);
   color: var(--secondary);
-  background-color: #fff;
+  background-color: var(--terciary);
 }
 
 main a,
@@ -88,8 +91,8 @@ button {
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
-  color: var(--terciary);
-  background-color: var(--secondary);
+  color: var(--secondary);
+  background-color: var(--primary);
 }
 main a:active,
 button:active {

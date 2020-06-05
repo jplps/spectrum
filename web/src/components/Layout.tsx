@@ -7,7 +7,8 @@ const Layout: React.FC = ({ children }) => (
 			<img
 				style={{
 					width: '100%',
-					height: 'auto'
+					height: 'auto',
+					backgroundColor: 'transparent'
 				}}
 				src="http://localhost:4000/assets/logo.png"
 				alt="Spectrum Logo"
