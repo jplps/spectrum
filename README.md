@@ -21,9 +21,9 @@ Some art forms combine visual elements with performance (e.g. cinematography), o
 
 ## Structure
 
-System: Dynamic Application
-Main lang(s): JavaScript (ECMA) / TypeScript
-Stack: Node / Express & Knex / Multer / React & React Native / Expo
+System: Dynamic Application  
+Main lang(s): JavaScript (ECMA) / TypeScript  
+Stack: Node / Express & Knex / Multer / React & React Native / Expo  
 Pattern: RESTful
 
 ### Server - The base backend with Node & Express
