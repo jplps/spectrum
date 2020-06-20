@@ -2,11 +2,9 @@
 
 Register cultural/artistic events all over the world, and locate others!
 
-Our vision for the audio-visual events is that they can be displayed as ARTISTIC LABORATORIES, comprehending all forms of human expression. Here you can find laboratories scattered all around, in places you couldn't imagine the existence before knowing about.
-
-We allow users to register cultural events. Users are able to filter events by area (city, state, latitude, longitude) and by it's art category(ies).
-
 ## Concept
+
+Our vision for the audio-visual events is that they can be displayed as ARTISTIC LABORATORIES, comprehending all forms of human expression. Here you can find laboratories scattered all around, in places you couldn't imagine the existence before knowing about.
 
 The human application and physical expression of creativity through skills and imagination in order to produce objects, environments and experiences IS art. And we believe that the most important form of expression with the reality by humans, is through the form of ART.
 
@@ -47,7 +45,14 @@ Now we may open two differents terminals, and this should get the app up and run
 
 If all went well, see localhost:3000 in the browser.
 
-### Todos
+## Requirements
+
+- [x] Register a Art Laboratory
+- [x] Filter Laboratories by area
+- [x] Filter Laboratories by category
+- [x] Show all Laboratories nearby
+
+### TODOS
 
 #### Structure
 
@@ -65,6 +70,7 @@ If all went well, see localhost:3000 in the browser.
 - [x] Create controllers with the avaiable routes
 
 #### Web
+
 - [x] Create-react-app in the frontend
 - [x] Clear & Refactor
 - [x] Create pages/ and components/
@@ -73,4 +79,5 @@ If all went well, see localhost:3000 in the browser.
 - [ ] Refactor Styles
 
 #### Mobile
+
 - [ ] Start React Native Project
