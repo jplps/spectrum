@@ -8,7 +8,7 @@ Our vision for the audio-visual events is that they can be displayed as ARTISTIC
 
 The human application and physical expression of creativity through skills and imagination in order to produce objects, environments and experiences IS art. And we believe that the most important form of expression with the reality by humans, is through the form of ART.
 
-Major art constituents:
+- Major art constituents
 	- Visual (Architecture, Ceramics, Drawing, Filmmaking, Painting, Photography, Sculpting)
 	- Literature (Fiction, Drama, Poetry, Prose)
 	- Performing (Dance, Music, Theatre)
